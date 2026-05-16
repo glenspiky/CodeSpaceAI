@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Inter } from "next/font/google";import "./globals.css";
+import { JetBrains_Mono, Inter, Geist } from "next/font/google";
+import "./globals.css";
 import Footer from "@/components/layout/footer/Footer";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const jetbrains = JetBrains_Mono({
-  subsets: ["latin"], 
-  variable: "--font-mono", 
-  display: "swap", 
-});
-
-const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-mono",
   display: "swap",
 });
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +25,22 @@ export default function RootLayout({
 }) {
   return (
     /* We add the variables to the body className */
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
-      <body className="dark font-sans antialiased">{children}
-        <Footer></Footer>
+    <html
+      lang="en"
+      className={cn(jetbrains.variable, "font-sans", geist.variable)}
+      suppressHydrationWarning
+    >
+      <body className=" font-sans antialiased">
+        {" "}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Footer></Footer>{" "}
+        </ThemeProvider>
       </body>
     </html>
   );

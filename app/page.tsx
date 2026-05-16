@@ -1,17 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import CleanHeroBg from "../../public/images/hero-clean-bg.webp";
-import logo from "../../public/icons/logo.png";
+import CleanHeroBg from "@/public/images/background.png";
+import logo from "@/public/icons/logo.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Sparkles, Terminal, BarChart3 } from "lucide-react";
 import { FeatureCard } from "@/components/cards/FeatureCard";
-import aiAssistantImg from "../../public/images/aiImage.png";
+import aiAssistantImg from "@/public/images/aiImage.png";
 import Cta from "@/components/layout/cta/Cta";
-import Footer from "@/components/layout/footer/Footer";
+import { Sparkles, Terminal, BarChart3 } from "lucide-react";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -113,8 +112,7 @@ export default function Home() {
             </Link>
 
             <div className="flex flex-col w-full px-10 gap-4 pt-10">
-              <Link
-                href="/login" >
+              <Link href="/login">
                 <Button
                   className="w-full h-14 text-lg bg-surface border border-border"
                   variant="secondary"
@@ -266,7 +264,6 @@ export default function Home() {
         </div>
       </section>
       <Cta></Cta>
-     
     </main>
   );
 }
