@@ -1,4 +1,5 @@
 import AppSidebar from "@/components/AppSidebar";
+import Footer from "@/components/layout/footer/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { SidebarProvider } from "@/components/ui/sidebar";
@@ -23,8 +24,9 @@ export default async function DashboardLayout({
           <AppSidebar />
           <main className="w-full">
             <Navbar />
-            <div className="px-4"></div>
+            <div className="px-4"></div>    
             {children}{" "}
+            <Footer/>
           </main>
         </SidebarProvider>
       </ThemeProvider>

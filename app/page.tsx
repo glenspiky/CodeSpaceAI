@@ -11,6 +11,7 @@ import { FeatureCard } from "@/components/cards/FeatureCard";
 import aiAssistantImg from "@/public/images/aiImage.png";
 import Cta from "@/components/layout/cta/Cta";
 import { Sparkles, Terminal, BarChart3 } from "lucide-react";
+import Footer from "@/components/layout/footer/Footer";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -264,6 +265,7 @@ export default function Home() {
         </div>
       </section>
       <Cta></Cta>
+      <Footer />
     </main>
   );
 }

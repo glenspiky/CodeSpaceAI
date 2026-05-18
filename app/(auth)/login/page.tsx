@@ -57,9 +57,7 @@ export default function LoginPage() {
         className="w-full max-w-md space-y-8 bg-card p-8 rounded-xl border border-border shadow-lg"
       >
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-primary italic">
-            DevSpace-AI
-          </h1>
+          <h1 className="text-3xl font-bold text-primary ">DevSpace-AI</h1>
           <p className="text-muted-foreground mt-2 text-sm">
             Welcome back! Please enter your details.
           </p>
