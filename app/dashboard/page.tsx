@@ -1,4 +1,6 @@
 import AppBarChart from "@/components/AppBarChart";
+import TodoList from "@/components/TodoList";
+import CardList from "@/components/CardList";
 import AppPieChart from "@/components/AppPieChart";
 import AppAreaChart from "@/components/AppAreaChart";
 
@@ -10,17 +12,19 @@ export default function Dashboard() {
         <AppBarChart />
       </div>
       <div className="bg-card border text-card-foreground p-4 rounded-xl">
-        test
+        <CardList title="Latest Transactions" />
       </div>
       <div className="bg-card border text-card-foreground p-4 rounded-xl">
         <AppPieChart />
       </div>
-      <div className="bg-card border text-card-foreground p-4 rounded-xl"></div>{" "}
+      <div className="bg-card border text-card-foreground p-4 rounded-xl">
+        <TodoList />
+      </div>{" "}
       <div className="bg-card border text-card-foreground p-4 rounded-xl lg:col-span-2 xl:col-span-1 2xl:col-span-2">
         <AppAreaChart />
       </div>
       <div className="bg-card border text-card-foreground p-4 rounded-xl">
-        test
+        <CardList title="Popular Transactions" />
       </div>
     </div>
   );
